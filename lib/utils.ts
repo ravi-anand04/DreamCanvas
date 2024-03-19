@@ -96,6 +96,8 @@ export const debounce = (func: (...args: any[]) => void, delay: number) => {
 
 // GE IMAGE SIZE
 export type AspectRatioKey = keyof typeof aspectRatioOptions;
+// get the keys of the type of the aspectRatioOptions object
+// will result in a union type containing all the keys of the aspectRatioOptions object
 export const getImageSize = (
   type: string,
   image: any,
