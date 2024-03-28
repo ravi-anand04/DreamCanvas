@@ -7,13 +7,20 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 const AddTransformTypePage = async ({ params: { type } }: SearchParamProps) => {
-  // Review code changes with original. You made a fix.
-  const clerkUser = auth();
+  // Review code changes. You made a fix.
+  // const clerkUser = auth();
+  // const transformation = transformationTypes[type];
+
+  // if (!clerkUser.userId) redirect("/sign-in");
+
+  // const user = await getUserById(clerkUser.userId);
+
+  const { userId } = auth();
   const transformation = transformationTypes[type];
 
-  if (!clerkUser.userId) redirect("/sign-in");
+  if (!userId) redirect("/sign-in");
 
-  const user = await getUserById(clerkUser.userId);
+  const user = await getUserById(userId);
 
   return (
     <>
