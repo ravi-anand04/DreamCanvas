@@ -24,7 +24,7 @@ const AddTransformTypePage = async ({ params: { type } }: SearchParamProps) => {
 
   return (
     <>
-      <Header title={transformation.title} subTitle={transformation.subTitle} />
+      <Header title={transformation.title} subtitle={transformation.subTitle} />
       <section className="mt-10">
         <TransformationForm
           action="Add"
